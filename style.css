@@ -90,7 +90,7 @@ img {
     height: auto;
 }
 .about-me{
-  background-color: #003399;
+  background-color: #669;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -98,26 +98,17 @@ img {
 .about-content{
   max-width: 1200px;
   overflow: hidden;
-  background-color: #003399;
+  background-color: #669;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 80px;
 }
 .aboutme-title{
   padding-top: 70px;
-  padding-bottom: 40px;
+  padding-bottom: 90px;
   text-align: center;
   font-size: 28px;
   color : white;
-}
-.aboutme-line{
-  margin-left: auto;
-  margin-right: auto;
-  width: 100px;
-  height: 5px;
-  background-color: #A7988B;
-  margin-top: -40px;
-  margin-bottom: 20px;
 }
 .left-content{
   float :left;
@@ -213,7 +204,7 @@ img {
   margin-right: auto;
 }
 .project-title{
-  padding-top: 70px;
+  padding-top: 170px;
   padding-bottom: 40px;
   text-align: center;
   font-size: 28px;
@@ -227,10 +218,10 @@ img {
   height: 5px;
   background-color: #A7988B;
   margin-top: -40px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .project-box{
-  height: 250px;
+  height: 350px;
   padding-top: 20px;
   box-sizing: border-box;
 
@@ -293,6 +284,20 @@ a:hover{
   background-color: #ebebeb;
 }
 
+.container-fluid
+{
+  background-color: #669;
+  height: 50px;
+}
+.fotter{
+  background-color: #669;
+}
+.fotter-content{
+  text-align: center;
+  color : white;
+  font-size: 19px;
+  padding-top: 10px;
+}
 
 @media screen and (max-width: 999px)
 {
@@ -313,6 +318,7 @@ a:hover{
 {
   .project-box{
     margin-left: 20%;
+    height: 300px;
   }
 }
 @media screen and (max-width: 620px)
@@ -333,6 +339,9 @@ a:hover{
   }
   .project-box{
     margin-left: 10%;
+  }
+  .project-box{
+    height: 200px;
   }
 }
 
