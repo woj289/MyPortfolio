@@ -1,54 +1,16 @@
-﻿
-<?php
- 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
- 
-require __DIR__ . '/vendor/autoload.php'; 
- 
-  
-     
-    $mail = new PHPMailer(true);                  
- 
-try {
- 
-    $mail->SMTPOptions = array(
-    'ssl' => array(
-        'verify_peer' => false,
-        'verify_peer_name' => false,
-        'allow_self_signed' => true
-                  )
-                              );
-     
-    $mail->Timeout  = 10;        
-    $mail->isSMTP();   
-    $mail->SMTPSecure = 'TLS'; 
-    $mail->Host = '******.com';  
-    $mail->SMTPAuth = true;                               
-    $mail->Username = 'art@********.com';                 
-    $mail->Password = '********';                
-    $mail->Port = 587;          
-         
-    $mail->setFrom('art@*******.com', 'NADAWCA NAZWA');
-    $mail->addAddress('*****', 'NAZWA');
-  
-     
-    $mail->isHTML(true);                                  
-    $mail->Subject = 'TEMAT WIADOMOSCI';
-    $mail->Body    = 'TO JEST TRESC';
-     
-    $html = new \Html2Text\Html2Text($mail->Body);
-     
-    $mail->AltBody = $html->getText();
- 
-    $mail->send();
-    echo 'Wiadmość wysłana poprawnie';
-} catch (Exception $e) {
-    
-    echo 'Nie można wysłać wiadmości: ' . $mail->ErrorInfo;
-     
-}
-     
- 
-?>
+<?PHP
+	$adresat = 'woj289@gmail.com'; 	// pod ten adres zostanie wysłana 							// wiadomosc
 
+	$imie = $_POST['imie'];
+	$phone = $_POST['email'];
+	$content = $_POST['content'];
+	$huj = $imie . "\r\n\r\n" . $phone . "\r\n\r\n" . $content;
+	$huj1 = $phone . $imie;
+	$header = 	"From: ktos@serwer.pl \nContent-Type:".
+			' text/plain;charset="iso-8859-2"'.
+			"\nContent-Transfer-Encoding: 8bit";
+	if (mail($adresat, 'List ze ', $huj , $header))
+		echo "<script language='javascript' type='text/javascript'>alert('Wyslano'); </script>";
+	else
+		echo "<script language='javascript' type='text/javascript'>alert('Wyslano'); </script>";
+?>
