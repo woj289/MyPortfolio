@@ -1,4 +1,0 @@
-Optymalizacja kodu
-Dodanie Tradingu
-Uruchomienie Formularza
-Wystawainie ofert na serwer i Portfolio te¿
